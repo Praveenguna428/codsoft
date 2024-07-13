@@ -10,17 +10,20 @@ def generate_password(length):
 
 def main():
     try:
-        print("   -------------------------------------------------------------   ")
+        print("   =============================================================   ")
         print("   ================== PYTHON PASSWORD GENERATOR ================    ")
-        print("   -------------------------------------------------------------   ")
+        print("   =============================================================   ")
     
+        
         length = int(input("   Enter the desired length of the password : "))
+        
+        
         print("   -------------------------------------------------------------    ")
         if length < 8 or length > 128:
             print("Password length must be between 8 and 128 characters.")
         else:
             complexity = input("   Choose password complexity (weak/medium/strong): ")
-            print("   _____________________________________________________________   ")
+            print("   -------------------------------------------------------------    ")
 
             complexity=complexity.lower()
             if complexity == "weak":
@@ -36,7 +39,7 @@ def main():
             print("                Generated Password:", password)
             print("   _____________________________________________________________   ")
             print("   ============= YOUR PASSWORD GENERATED SUCCESSFULLY ==========    ")
-
+            print("   _____________________________________________________________   ")
             
     except ValueError:
         print("Please enter a valid number for the password length.")
